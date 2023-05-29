@@ -1,0 +1,10 @@
+<app-add (AddForm)="AddAction($event)"></app-add>
+<h5>Your Notes</h5>
+
+<div *ngIf="this.todo_list.length===0; else elseBlock">No more things to do!</div>
+
+<ng-template #elseBlock>
+    <div *ngFor="let examples of todo_list">
+        <app-notes [todo_list]="examples" (DeleteForm)="DeleteAction($event)"></app-notes>
+    </div>
+</ng-template>

@@ -1,0 +1,12 @@
+<h5>Add a Task</h5>
+<form (ngSubmit)="onSubmit()">
+    <div class="mb-3">
+      <label for="title" class="form-label">Title</label>
+      <input type="text" [(ngModel)]="title" name= "title" class="form-control" id="title">
+    <!-- </div>
+    <div class="mb-3"> -->
+      <label for="desc" class="form-label">Description</label>
+      <input type="text" class="form-control" id="desc" [(ngModel)]="desc" name= "desc">
+        <div class="submitbtn"><button type="submit" class="btn  btn-primary">ADD</button></div>
+    </div>
+  </form>
